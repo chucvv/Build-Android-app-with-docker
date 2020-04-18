@@ -10,11 +10,11 @@
 # Build docker image
 If your CI server must run behind the proxy
 then you need to add more config
-For example proxy is 172.0.0.1, port 3128 
+For example proxy is 192.168.0.1, port 3128 
 
 Run command at _folder that contain Dockerfile_ to buid image
 ```
-docker build --build-arg PROXY_HOST=172.0.0.1 --build-arg PROXY_PORT=3128 --build-arg ANDROID_API_LEVEL=28 --build-arg ANDROID_BUILD_TOOLS_LEVEL=28.0.3 -t images-build-container:v1.1_11_04_20   -f Dockerfile .
+docker build --build-arg PROXY_HOST=192.168.0.1 --build-arg PROXY_PORT=3128 --build-arg ANDROID_API_LEVEL=28 --build-arg ANDROID_BUILD_TOOLS_LEVEL=28.0.3 -t images-build-container:v1.1_11_04_20   -f Dockerfile .
 ```
 With:
 `--build-arg` to override arguments defined in Dockerfile
